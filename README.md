@@ -1,6 +1,10 @@
 Unreal Capability Detect Demo
 =============================
 
+<p align="center">
+  <img width="%50" height="%50" src="_Images/plugin-splash.jpg">
+</p>
+
 > [!IMPORTANT]  
 > This project will no longer be maintained by Intel. Intel has ceased development and contributions including, but not limited to, maintenance, bug fixes, new releases, or updates, to this project.
 > *Intel no longer accepts patches to this project.
