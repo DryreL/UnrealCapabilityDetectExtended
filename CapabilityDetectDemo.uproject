@@ -1,22 +1,22 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.19",
+	"EngineAssociation": "4.27",
 	"Category": "",
 	"Description": "",
 	"Modules": [
-    {
-      "Name": "CapabilityDetectDemo",
-      "Type": "Runtime",
-      "LoadingPhase": "Default",
-      "AdditionalDependencies": [
-        "Engine",
-        "CapabilityDetect"
-      ]
-    }
+		{
+			"Name": "CapabilityDetectDemo",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"CapabilityDetect"
+			]
+		}
 	],
 	"Plugins": [
 		{
-      "Name": "CapabilityDetect",
+			"Name": "CapabilityDetect",
 			"Enabled": true
 		}
 	]

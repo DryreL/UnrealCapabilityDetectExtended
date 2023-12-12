@@ -1,2 +1,2 @@
-#TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.16299.0
-Release|x64|C:\Users\duboism\Documents\GitHub\CapabilityDetectDemo\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\|
+PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.38.33130:TargetPlatformVersion=10.0.22621.0:
+Release|x64|D:\OneDrive\Belgeler\Unreal Projects\sallamasyon\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\|

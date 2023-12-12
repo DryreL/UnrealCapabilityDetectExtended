@@ -2,9 +2,9 @@
 
 #include "CapabilityDetect.h"
 #include "Core.h"
-#include "ModuleManager.h"
-#include "IPluginManager.h"
-#include "CapabilityDetectLibrary.h"
+#include "Modules/ModuleManager.h"
+#include "Interfaces/IPluginManager.h"
+#include "ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.h"
 
 #define LOCTEXT_NAMESPACE "FCapabilityDetectModule"
 

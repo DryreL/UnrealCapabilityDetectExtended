@@ -15,9 +15,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "CapabilityDetectBPLib.h"
-#include "CapabilityDetectLibrary.h"
+#include "ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.h"
 #include "Runtime/RHI/Public/RHI.h"
-#include "PlatformSurvey.h"
+#include "Runtime/ApplicationCore/Public/HAL/PlatformSurvey.h"
 #include "SynthBenchmark.h"
 
 void UCapabilityDetectBPLib::InitializeResources()
