@@ -24,9 +24,9 @@
 #include <Psapi.h>
 #include <D3D11.h>
 #include <dxdiag.h>
-#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
-#include <Setupapi.h>
+#pragma comment (lib, "SetupAPI.lib")
+#include <SetupAPI.h>
 #include <regex>
 #include <intrin.h>
 

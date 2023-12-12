@@ -26,10 +26,10 @@ public class CapabilityDetectDemo : ModuleRules
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
         string BaseDirectory = Path.GetFullPath(Path.Combine(ModuleDirectory, "..", ".."));
-        string PluginDirectory = Path.Combine(BaseDirectory, "Plugins", "CapabilityDetect", "Binaries", "ThirdParty", "CapabilityDetectLibrary", "Win64");
+        string PluginDirectory = Path.Combine(BaseDirectory, "Plugins", "CapabilityDetect", "Binaries", "ThirdParty", "CapabilityDetectLibrary", "x64", "Release", "Win64");
 
         if (Target.Platform == UnrealTargetPlatform.Win64) {
-            RuntimeDependencies.Add(new RuntimeDependency(Path.Combine(PluginDirectory, "CapabilityDetectLibrary.dll")));
+            RuntimeDependencies.Add(Path.Combine(PluginDirectory, "CapabilityDetectLibrary.dll"));
         }
 
         // Uncomment if you are using Slate UI
