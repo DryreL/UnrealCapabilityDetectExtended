@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <None Include="..\..\CapabilityDetectDemo.uproject" />
@@ -12,6 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
     <None Include="..\..\CapabilityDetectDemo.png" />
     <None Include="..\..\LICENSE" />
     <None Include="..\..\README.md" />
@@ -25,6 +26,9 @@
       <Filter>Config</Filter>
     </None>
     <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
     <Filter Include="Config\HoloLens">
