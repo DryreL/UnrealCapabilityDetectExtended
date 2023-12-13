@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.dll</FullPath>
+      <FullPath>D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Debug\CapabilityDetectLibrary.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

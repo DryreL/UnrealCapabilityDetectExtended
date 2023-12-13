@@ -1,0 +1,72 @@
+﻿  CapabilityDetectLibrary.cpp
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(35,16): warning C4273: 'Intel_IsIntelCPU': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(27,16):
+  see previous definition of 'Intel_IsIntelCPU'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(45,16): warning C4273: 'Intel_InitializeResources': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(24,16):
+  see previous definition of 'Intel_InitializeResources'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(50,15): warning C4273: 'Intel_GetNumLogicalCores': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(34,15):
+  see previous definition of 'Intel_GetNumLogicalCores'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(58,15): warning C4273: 'Intel_GetNumPhysicalCores': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(41,15):
+  see previous definition of 'Intel_GetNumPhysicalCores'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(66,18): warning C4273: 'Intel_GetComittedMemoryMB': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(42,18):
+  see previous definition of 'Intel_GetComittedMemoryMB'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(76,18): warning C4273: 'Intel_GetAvailableMemoryMB': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(43,18):
+  see previous definition of 'Intel_GetAvailableMemoryMB'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(86,18): warning C4273: 'Intel_GetCacheSizeMB': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(37,18):
+  see previous definition of 'Intel_GetCacheSizeMB'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(96,18): warning C4273: 'Intel_GetCoreFrequency': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(47,18):
+  see previous definition of 'Intel_GetCoreFrequency'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(106,18): warning C4273: 'Intel_GetCorePercMaxFrequency': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(48,18):
+  see previous definition of 'Intel_GetCorePercMaxFrequency'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(116,18): warning C4273: 'Intel_GetMaxBaseFrequency': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(36,18):
+  see previous definition of 'Intel_GetMaxBaseFrequency'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(129,18): warning C4273: 'Intel_GetUsablePhysMemoryGB': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(35,18):
+  see previous definition of 'Intel_GetUsablePhysMemoryGB'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(139,16): warning C4273: 'Intel_FreeResources': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(30,16):
+  see previous definition of 'Intel_FreeResources'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(145,16): warning C4273: 'Intel_GetSKU': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(49,16):
+  see previous definition of 'Intel_GetSKU'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(158,16): warning C4273: 'Intel_GetFullProcessorName': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(50,16):
+  see previous definition of 'Intel_GetFullProcessorName'
+  
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.cpp(170,16): warning C4273: 'Intel_GetProcessorName': inconsistent dll linkage
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\CapabilityDetectLibrary.h(51,16):
+  see previous definition of 'Intel_GetProcessorName'
+  
+  StatsCollector.cpp
+  WindowsCollector.cpp
+     Creating library D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.lib and object D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.exp
+  Generating code
+  1047 of 1062 functions (98.6%) were compiled, the rest were copied from previous compilation.
+    9 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  CapabilityDetectLibrary.vcxproj -> D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.dll
+  D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.dll
+  1 File(s) copied

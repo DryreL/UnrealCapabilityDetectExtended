@@ -1,1 +1,2 @@
 D:\GithubRepos\upgradetest\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.dll
+D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.dll
