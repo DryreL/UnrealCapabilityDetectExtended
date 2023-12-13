@@ -122,8 +122,19 @@ Requirements
 For compilation:
 
 > [!IMPORTANT]  
-> 1) Visual Studio C++ 2022 / JetBrains Rider 2022 or greater.
-> 1) Unreal Engine 4.18 or greater.
+> - Visual Studio C++ 2022 / JetBrains Rider 2022 or greater.
+> - Unreal Engine 4.18 or greater.
+> - [<img width="24px" height="24px" src="_Images/icon-visualstudio.png">](https://visualstudio.microsoft.com/downloads/)    [<img width="24px" height="24px" src="_Images/icon-jetbrainsrider.png">](https://www.jetbrains.com/rider/download/)    [<img width="24px" height="24px" src="_Images/icon-unrealengine.png">](https://www.unrealengine.com/en-US/download)
+
+Troubleshoot
+==================
+
+> [!CAUTION]
+> **Failed to load capability detect library**
+>
+> Once you complete the **Compiling the Third Party Library** step in [Setup Instructions](#setup-instructions), the problem will be resolved.
+>
+>  <img width="%66" height="%66" src="_Images/plugin-error-failed-to-load-library.jpg">
 
 Intel makes the most of computing power with new plugin
 ==================
@@ -400,7 +411,7 @@ Alternatively, we can use the same **GetCapabilityLevel()** function we used in 
 Lastly, there is a Blueprint function that comes packaged with the Capability Detect Plugin. With this function you can get more granularity with your platform details in your Blueprints. Just add the **Detect Capabilities** node to your Blueprint and utilize the values you need for your game (Figure 2). 
 
 <p align="center">
-  <img width="%50" height="%50" src="_Images/img8.jpg">
+  <img width="%25" height="%25" src="_Images/img8.jpg">
 </p>
 
 ### **Conclusion**
