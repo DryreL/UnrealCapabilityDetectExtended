@@ -41,20 +41,19 @@ public class CapabilityDetectLibrary : ModuleRules
 
 			PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "x64", "Release"));
 			PublicAdditionalLibraries.Add("$(ModuleDir)/x64/Release/CapabilityDetectLibrary.lib");
-			PublicDelayLoadDLLs.Add("CapabilityDetectLibrary.dll");
+			PublicDelayLoadDLLs.Add("$(ModuleDir)/x64/Release/CapabilityDetectLibrary.dll");
 
+            // Delay-load the DLL, so we can load it from the right place first
+            //PublicDelayLoadDLLs.Add("$(PluginDir)/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.dll");
 
-			// Delay-load the DLL, so we can load it from the right place first
-			//PublicDelayLoadDLLs.Add("$(PluginDir)/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.dll");
-
-/*
-			string LibDelayLoadPath = Path.Combine(ModuleDirectory, "x64", "Release");
-			foreach (string file in Directory.GetFiles(LibDelayLoadPath, "*dll"))
-			{
-				PublicDelayLoadDLLs.Add(file);
-			}
-*/
-		}
+            /*
+                        string LibDelayLoadPath = Path.Combine(ModuleDirectory, "x64", "Release");
+                        foreach (string file in Directory.GetFiles(LibDelayLoadPath, "*dll"))
+                        {
+                            PublicDelayLoadDLLs.Add(file);
+                        }
+            */
+        }
         else if (Target.Platform == UnrealTargetPlatform.Mac)
         {
 /*

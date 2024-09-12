@@ -26,7 +26,9 @@
 UCLASS(BlueprintType)
 class CAPABILITYDETECTDEMO_API UPlatformConfig : public UDataAsset
 {
+	
 	GENERATED_BODY()
+	
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Platform Configuration")
 	float CPUPerfIndex;

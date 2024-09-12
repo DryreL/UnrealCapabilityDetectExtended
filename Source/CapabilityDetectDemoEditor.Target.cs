@@ -24,5 +24,19 @@ public class CapabilityDetectDemoEditorTarget : TargetRules
 		Type = TargetType.Editor;
 
 		ExtraModuleNames.AddRange( new string[] { "CapabilityDetectDemo" } );
+		
+		// ERROR: Targets with a unique build environment cannot be built with an installed engine.
+		//BuildEnvironment = TargetBuildEnvironment.Unique;
+		
+		// Override build environment settings
+		bOverrideBuildEnvironment = true;
+
+		DefaultBuildSettings = BuildSettingsVersion.V5;
+		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
+		bValidateFormatStrings = true;
+		WindowsPlatform.bStrictConformanceMode = true;
+		CppStandard = CppStandardVersion.Default;
+		bLegacyParentIncludePaths = false;
+		//ShadowVariableWarningLevel = WarningLevel.Error;
 	}
 }

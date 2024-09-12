@@ -16,6 +16,7 @@
     <None Include="..\..\CapabilityDetectDemo.png" />
     <None Include="..\..\LICENSE" />
     <None Include="..\..\README.md" />
+    <None Include="..\..\UpgradeLog.htm" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -121,9 +122,6 @@
     <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.idea\.idea.CapabilityDetectLibrary\.idea">
       <UniqueIdentifier>{2CF9B853-EA32-31F3-8292-D8E3234A8155}</UniqueIdentifier>
     </Filter>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.idea\.idea.CapabilityDetectLibrary\.idea\.gitignore">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.idea\.idea.CapabilityDetectLibrary\.idea</Filter>
-    </None>
     <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.idea\.idea.CapabilityDetectLibrary\.idea\encodings.xml">
       <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.idea\.idea.CapabilityDetectLibrary\.idea</Filter>
     </None>
@@ -133,8 +131,131 @@
     <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.idea\.idea.CapabilityDetectLibrary\.idea\projectSettingsUpdater.xml">
       <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.idea\.idea.CapabilityDetectLibrary\.idea</Filter>
     </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.idea\.idea.CapabilityDetectLibrary\.idea\vcs.xml">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.idea\.idea.CapabilityDetectLibrary\.idea</Filter>
+    </None>
     <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.idea\.idea.CapabilityDetectLibrary\.idea\workspace.xml">
       <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.idea\.idea.CapabilityDetectLibrary\.idea</Filter>
+    </None>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs">
+      <UniqueIdentifier>{FC035D0D-DA1C-3876-B693-2D9FFCC7D529}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary">
+      <UniqueIdentifier>{3954F8BA-DBAE-3221-9B2D-C39433AD7592}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\FileContentIndex">
+      <UniqueIdentifier>{2D87170C-C891-3E0C-BD50-9FE96B2A7204}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\FileContentIndex\54aa4bdf-8428-4586-8b70-4ae0dfcb35d8.vsidx">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\FileContentIndex</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\FileContentIndex\5b621115-6e20-48d3-b120-2d40fd1e5835.vsidx">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\FileContentIndex</Filter>
+    </None>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17">
+      <UniqueIdentifier>{B031F81F-F3F6-326D-8FFF-104F8AE87E63}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\Browse.VC.db">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\DocumentLayout.json">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\Solution.VC.db">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17</Filter>
+    </None>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch">
+      <UniqueIdentifier>{32B155EF-3092-3AD2-96BA-6159AAB325A6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch\AutoPCH">
+      <UniqueIdentifier>{3D234CFF-2B66-3E3B-A7AB-C3A272CBBA65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch\AutoPCH\901b1f3405e5f977">
+      <UniqueIdentifier>{2B8C49D7-D814-3628-917D-EE48F44DDB48}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch\AutoPCH\901b1f3405e5f977\CAPABILITYDETECTLIBRARY.ipch">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch\AutoPCH\901b1f3405e5f977</Filter>
+    </None>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch\AutoPCH\919916133987fea5">
+      <UniqueIdentifier>{FDE4354E-2B17-303C-98A5-57B1649B1226}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch\AutoPCH\919916133987fea5\VCTMP9712_314201.CAPABILITYDETECTLIBRARY.00000000.ipch">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch\AutoPCH\919916133987fea5</Filter>
+    </None>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch\AutoPCH\a46174001b3f96d1">
+      <UniqueIdentifier>{9CDF649F-9016-32BB-95E8-5138EC78E009}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch\AutoPCH\a46174001b3f96d1\STATSCOLLECTOR.ipch">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch\AutoPCH\a46174001b3f96d1</Filter>
+    </None>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch\AutoPCH\b0825a847764df8d">
+      <UniqueIdentifier>{E40B0F6D-4B60-3425-A339-632710BD86FB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch\AutoPCH\b0825a847764df8d\CAPABILITYDETECTLIBRARY.ipch">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\ipch\AutoPCH\b0825a847764df8d</Filter>
+    </None>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8">
+      <UniqueIdentifier>{DBDA206E-11EE-3BAB-96CA-6D3857F987EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64">
+      <UniqueIdentifier>{5A2198E5-21B8-3D4A-9426-DFC9600A5FB7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release">
+      <UniqueIdentifier>{59C0B7C1-86BF-3B33-AFBE-DD02E711BE5E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\CapabilityDetectLibrary.dll.recipe">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\CapabilityDetectLibrary.iobj">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\CapabilityDetectLibrary.ipdb">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\CapabilityDetectLibrary.log">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\CapabilityDetectLibrary.obj">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\StatsCollector.obj">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\vc143.pdb">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\WindowsCollector.obj">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release</Filter>
+    </None>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog">
+      <UniqueIdentifier>{21142D85-D072-3BB3-9EA9-A285B5558BE5}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog\CapabilityDetectLibrary.lastbuildstate">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog\CL.command.1.tlog">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog\Cl.items.tlog">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog\CL.read.1.tlog">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog\CL.write.1.tlog">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog\link.command.1.tlog">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog\link.read.1.tlog">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog\link.secondary.1.tlog">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog\link.write.1.tlog">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\Capabili.9B50F1F8\x64\Release\Capabili.9B50F1F8.tlog</Filter>
     </None>
     <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64">
       <UniqueIdentifier>{54F3ADAE-9B93-3192-B4BF-8954474F432B}</UniqueIdentifier>
@@ -142,68 +263,17 @@
     <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release">
       <UniqueIdentifier>{EDA9AD9A-8AB1-3E94-8B26-4403A1D8A8BC}</UniqueIdentifier>
     </Filter>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.dll.recipe">
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.dll">
       <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release</Filter>
     </None>
     <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.exp">
       <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release</Filter>
     </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.iobj">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.ipdb">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release</Filter>
-    </None>
     <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.lib">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.obj">
       <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release</Filter>
     </None>
     <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.pdb">
       <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\CapabilityDetectLibrary.vcxproj.FileListAbsolute.txt">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\StatsCollector.obj">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\vc143.pdb">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\WindowsCollector.obj">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release</Filter>
-    </None>
-    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog">
-      <UniqueIdentifier>{2011E7E0-64B9-3CC3-81B1-22D8251EABFD}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog\CapabilityDetectLibrary.lastbuildstate">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog\cl.command.1.tlog">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog\Cl.items.tlog">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog\CL.read.1.tlog">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog\CL.write.1.tlog">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog\link.command.1.tlog">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog\link.read.1.tlog">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog\link.write.1.tlog">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog</Filter>
-    </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog\link.write.2u.tlog">
-      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\x64\Release\Capabili.9B50F1F8.tlog</Filter>
     </None>
     <Filter Include="Source\CapabilityDetectDemo">
       <UniqueIdentifier>{D8B650E8-B899-35E9-B66C-B4D49257F122}</UniqueIdentifier>

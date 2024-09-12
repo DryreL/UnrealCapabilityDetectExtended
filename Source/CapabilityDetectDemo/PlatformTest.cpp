@@ -16,9 +16,9 @@
 
 #include "PlatformTest.h"
 #include "PlatformConfig.h"
-#include "PlatformSurvey.h"
+#include "HAL/PlatformSurvey.h"
 #include "CapabilityDetectBPLib.h"
-#include "ConstructorHelpers.h"
+#include "UObject/ConstructorHelpers.h"
 
 bool UCapabilityTest::CapabilityTest(UPlatformConfig* config)
 {

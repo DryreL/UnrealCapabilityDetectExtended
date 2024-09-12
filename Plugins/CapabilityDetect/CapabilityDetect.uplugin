@@ -10,7 +10,7 @@
 	"DocsURL": "https://github.com/DryreL/UnrealCapabilityDetectExtended",
 	"MarketplaceURL": "",
 	"SupportURL": "https://github.com/DryreL/UnrealCapabilityDetectExtended/discussions",
-	"EngineVersion": "5.3",
+	"EngineVersion": "5.4",
 	"CanContainContent": true,
 	"Installed": true,
 	"Modules": [

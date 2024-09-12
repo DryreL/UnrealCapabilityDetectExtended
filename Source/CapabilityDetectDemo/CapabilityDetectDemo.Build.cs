@@ -26,10 +26,23 @@ public class CapabilityDetectDemo : ModuleRules
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
         string BaseDirectory = Path.GetFullPath(Path.Combine(ModuleDirectory, "..", ".."));
-        string PluginDirectory = Path.Combine(BaseDirectory, "Plugins", "CapabilityDetect", "Binaries", "ThirdParty", "CapabilityDetectLibrary", "x64", "Release", "Win64");
+        string PluginDirectory = Path.Combine(BaseDirectory, "Plugins", "CapabilityDetect", "Binaries", "ThirdParty", "CapabilityDetectLibrary", "Win64");
+        
+        if (Target.Platform == UnrealTargetPlatform.Win64)
+        {
+	        // Add the required DLL as a runtime dependency
+	        string DllPath = Path.Combine(PluginDirectory, "CapabilityDetectLibrary.dll");
 
-        if (Target.Platform == UnrealTargetPlatform.Win64) {
-            RuntimeDependencies.Add(Path.Combine(PluginDirectory, "CapabilityDetectLibrary.dll"));
+	        if (File.Exists(DllPath))
+	        {
+		        RuntimeDependencies.Add(DllPath);
+		        PublicDelayLoadDLLs.Add("CapabilityDetectLibrary.dll");
+		        //PublicAdditionalLibraries.Add(DllPath); // If you need the static library as well
+	        }
+	        else
+	        {
+		        System.Console.WriteLine("DLL not found at path: " + DllPath);
+	        }
         }
 
         // Uncomment if you are using Slate UI

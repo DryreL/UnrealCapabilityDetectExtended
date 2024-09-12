@@ -20,9 +20,6 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "CapabilityDetectBPLib.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class CAPABILITYDETECT_API UCapabilityDetectBPLib : public UBlueprintFunctionLibrary
 {
