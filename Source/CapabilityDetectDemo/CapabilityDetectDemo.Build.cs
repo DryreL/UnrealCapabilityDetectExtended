@@ -31,17 +31,17 @@ public class CapabilityDetectDemo : ModuleRules
         if (Target.Platform == UnrealTargetPlatform.Win64)
         {
 	        // Add the required DLL as a runtime dependency
-	        string DllPath = Path.Combine(PluginDirectory, "CapabilityDetectLibrary.dll");
+	        string dllPath = Path.Combine(PluginDirectory, "CapabilityDetectLibrary.dll");
 
-	        if (File.Exists(DllPath))
+	        if (File.Exists(dllPath))
 	        {
-		        RuntimeDependencies.Add(DllPath);
+		        RuntimeDependencies.Add(dllPath);
 		        PublicDelayLoadDLLs.Add("CapabilityDetectLibrary.dll");
 		        //PublicAdditionalLibraries.Add(DllPath); // If you need the static library as well
 	        }
 	        else
 	        {
-		        System.Console.WriteLine("DLL not found at path: " + DllPath);
+		        System.Console.WriteLine("DLL not found at path: " + dllPath);
 	        }
         }
 

@@ -18,6 +18,10 @@
 		{
 			"Name": "CapabilityDetect",
 			"Enabled": true
+		},
+		{
+			"Name": "DryreLUIEssentialsPlugin",
+			"Enabled": false
 		}
 	]
 }

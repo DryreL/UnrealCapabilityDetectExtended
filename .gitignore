@@ -1,5 +1,9 @@
 # Visual Studio 2015 user specific files
 .vs/
+.vsconfig
+
+# Rider
+.idea/
 
 # Compiled Object files
 *.slo
@@ -72,4 +76,8 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+LocalDerivedDataCache/*
+
 Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/Capabili.9B50F1F8
+
+Intermediate/ProjectFiles/*

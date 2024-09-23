@@ -143,19 +143,40 @@
     <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary">
       <UniqueIdentifier>{3954F8BA-DBAE-3221-9B2D-C39433AD7592}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\CopilotIndices">
+      <UniqueIdentifier>{6E6CFA6B-0F9C-3042-925A-94BD4368ADE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\CopilotIndices\0.2.1653.9816">
+      <UniqueIdentifier>{6E726EFB-34B1-3856-9A6E-672CB52DAD60}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\CopilotIndices\0.2.1653.9816\CodeChunks.db">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\CopilotIndices\0.2.1653.9816</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\CopilotIndices\0.2.1653.9816\SemanticSymbols.db">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\CopilotIndices\0.2.1653.9816</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\CopilotIndices\0.2.1653.9816\SemanticSymbols.db-shm">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\CopilotIndices\0.2.1653.9816</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\CopilotIndices\0.2.1653.9816\SemanticSymbols.db-wal">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\CopilotIndices\0.2.1653.9816</Filter>
+    </None>
     <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\FileContentIndex">
       <UniqueIdentifier>{2D87170C-C891-3E0C-BD50-9FE96B2A7204}</UniqueIdentifier>
     </Filter>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\FileContentIndex\54aa4bdf-8428-4586-8b70-4ae0dfcb35d8.vsidx">
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\FileContentIndex\27bc664e-7c8b-410c-9793-a3d08169fc50.vsidx">
       <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\FileContentIndex</Filter>
     </None>
-    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\FileContentIndex\5b621115-6e20-48d3-b120-2d40fd1e5835.vsidx">
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\FileContentIndex\54aa4bdf-8428-4586-8b70-4ae0dfcb35d8.vsidx">
       <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\FileContentIndex</Filter>
     </None>
     <Filter Include="Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17">
       <UniqueIdentifier>{B031F81F-F3F6-326D-8FFF-104F8AE87E63}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\Browse.VC.db">
+      <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17</Filter>
+    </None>
+    <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\DocumentLayout.backup.json">
       <Filter>Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17</Filter>
     </None>
     <None Include="..\..\Plugins\CapabilityDetect\Source\ThirdParty\CapabilityDetectLibrary\.vs\CapabilityDetectLibrary\v17\DocumentLayout.json">

@@ -12,14 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbd77131-be2e-4f96-8ab2-6c7cfb79e710" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo.dir/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo.dir/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vsconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.vsconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Windows/Application.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CapabilityDetectDemo.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CapabilityDetectDemo.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CapabilityDetectDemo.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/CapabilityDetectDemo.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRules/CapabilityDetectDemoModuleRules.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRules/CapabilityDetectDemoModuleRules.pdb" afterDir="false" />
@@ -27,51 +21,10 @@
       <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/CapabilityDetectDemo.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/CapabilityDetectDemo.vcxproj.filters" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/CapabilityDetectDemo.vcxproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/CapabilityDetectDemo.vcxproj.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/CapabilityDetect.uplugin" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/CapabilityDetect.uplugin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/CapabilityDetect/Public/CapabilityDetectBPLib.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/CapabilityDetect/Public/CapabilityDetectBPLib.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/.idea/.idea.CapabilityDetectLibrary/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/.idea/.idea.CapabilityDetectLibrary/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/.idea/.idea.CapabilityDetectLibrary/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/Capabili.9B50F1F8.tlog/CL.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/Capabili.9B50F1F8.tlog/CL.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/Capabili.9B50F1F8.tlog/CL.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/Capabili.9B50F1F8.tlog/CapabilityDetectLibrary.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/Capabili.9B50F1F8.tlog/Cl.items.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/Capabili.9B50F1F8.tlog/link.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/Capabili.9B50F1F8.tlog/link.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/Capabili.9B50F1F8.tlog/link.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/Capabili.9B50F1F8.tlog/link.write.2u.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/CapabilityDetectLibrary.dll.recipe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/CapabilityDetectLibrary.exp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/CapabilityDetectLibrary.ilk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/CapabilityDetectLibrary.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/CapabilityDetectLibrary.vcxproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/vc143.idb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Debug/vc143.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/Capabili.9B50F1F8.tlog/CL.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/Capabili.9B50F1F8.tlog/CL.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/Capabili.9B50F1F8.tlog/CapabilityDetectLibrary.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/Capabili.9B50F1F8.tlog/Cl.items.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/Capabili.9B50F1F8.tlog/cl.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/Capabili.9B50F1F8.tlog/link.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/Capabili.9B50F1F8.tlog/link.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/Capabili.9B50F1F8.tlog/link.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/Capabili.9B50F1F8.tlog/link.write.2u.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.dll.recipe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.exp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.iobj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.ipdb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.lib" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.lib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.vcxproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/vc143.pdb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/CapabilityDetectDemo/CapabilityDetectDemo.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CapabilityDetectDemo/CapabilityDetectDemo.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/CapabilityDetectDemo/PlatformConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CapabilityDetectDemo/PlatformConfig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/CapabilityDetectDemo/PlatformTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CapabilityDetectDemo/PlatformTest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/CapabilityDetectDemoEditor.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CapabilityDetectDemoEditor.Target.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,12 +35,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Plugins/CapabilityDetect/Source/CapabilityDetect/CapabilityDetect.Build.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/CapabilityDetectDemo/CapabilityDetectDemo.Build.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/CapabilityDetectDemoEditor.Target.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Program Files/Epic Games/UE_5.4/Engine/Source/Runtime/Core/Public/Windows/WindowsPlatform.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -98,28 +57,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C++ Project.CapabilityDetectDemo.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ue__5.4",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Inspections-C++",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C++ Project.CapabilityDetectDemo.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ue__5.4&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Inspections-C++&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\DryreL\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\DryreL\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\DryreL\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\DryreL\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\DryreL\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\DryreL\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="C++ Project.CapabilityDetectDemo">
     <configuration name="CapabilityDetectDemo" type="CppProject" factoryName="C++ Project">
       <configuration_1>
@@ -529,7 +488,12 @@
       <workItem from="1726145425189" duration="437000" />
       <workItem from="1726145929272" duration="2304000" />
       <workItem from="1726150313815" duration="3040000" />
-      <workItem from="1726153580860" duration="1524000" />
+      <workItem from="1726153580860" duration="1880000" />
+      <workItem from="1727098712420" duration="600000" />
+      <workItem from="1727099694046" duration="1510000" />
+      <workItem from="1727103425513" duration="1699000" />
+      <workItem from="1727105700848" duration="75000" />
+      <workItem from="1727105899540" duration="335000" />
     </task>
     <servers />
   </component>
