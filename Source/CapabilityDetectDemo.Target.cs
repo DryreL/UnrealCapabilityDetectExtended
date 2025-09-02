@@ -24,5 +24,9 @@ public class CapabilityDetectDemoTarget : TargetRules
 		Type = TargetType.Game;
 
 		ExtraModuleNames.AddRange( new string[] { "CapabilityDetectDemo" } );
+		
+		// UE 5+ compatibility - use latest build settings
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
+		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
 	}
 }
