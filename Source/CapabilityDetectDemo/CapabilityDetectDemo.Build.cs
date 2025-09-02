@@ -14,7 +14,6 @@
 // limitations under the License.
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-using System.IO;
 using UnrealBuildTool;
 
 public class CapabilityDetectDemo : ModuleRules
@@ -27,28 +26,6 @@ public class CapabilityDetectDemo : ModuleRules
 		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
-
-        // Only add DLL dependencies on Windows platform
-        if (Target.Platform == UnrealTargetPlatform.Win64)
-        {
-            string BaseDirectory = Path.GetFullPath(Path.Combine(ModuleDirectory, "..", ".."));
-            // Use Binaries folder path where DLL is automatically copied
-            string PluginDirectory = Path.Combine(BaseDirectory, "Plugins", "CapabilityDetect", "Binaries", "ThirdParty", "CapabilityDetectLibrary", "Win64");
-            
-            // Add the required DLL as a runtime dependency
-            string dllPath = Path.Combine(PluginDirectory, "CapabilityDetectLibrary.dll");
-
-            if (File.Exists(dllPath))
-            {
-                RuntimeDependencies.Add(dllPath);
-                PublicDelayLoadDLLs.Add("CapabilityDetectLibrary.dll");
-            }
-            else
-            {
-                System.Console.WriteLine("DLL not found at path: " + dllPath);
-                System.Console.WriteLine("Expected path: " + dllPath);
-            }
-        }
 
         // Uncomment if you are using Slate UI
         // PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

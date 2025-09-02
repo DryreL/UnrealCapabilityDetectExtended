@@ -29,46 +29,69 @@ public class CapabilityDetectLibrary : ModuleRules
 		// Only include Windows-specific dependencies
 		if (Target.Platform == UnrealTargetPlatform.Win64)
 		{
-			// Source path where DLL is located
+			// Source path where DLL is located - exact path as specified by user
 			string SourceLibPath = Path.Combine(ModuleDirectory, "x64", "Release");
 			
-			// Target path in Binaries folder
-			string TargetLibPath = Path.Combine(ModuleDirectory, "..", "..", "..", "..", "Binaries", "ThirdParty", "CapabilityDetectLibrary", "Win64");
+			// Log the exact path being checked
+			System.Console.WriteLine("CapabilityDetectLibrary: Checking source path: " + SourceLibPath);
 			
-			if (Directory.Exists(SourceLibPath))
+			// Check if the source directory exists
+			if (!Directory.Exists(SourceLibPath))
 			{
-				// Add source path for compilation
-				PublicIncludePaths.Add(SourceLibPath);
-				PublicAdditionalLibraries.Add(Path.Combine(SourceLibPath, "CapabilityDetectLibrary.lib"));
-				
-				// Copy DLL to Binaries folder and use that path for runtime
-				string SourceDll = Path.Combine(SourceLibPath, "CapabilityDetectLibrary.dll");
-				string TargetDll = Path.Combine(TargetLibPath, "CapabilityDetectLibrary.dll");
-				
-				// Ensure target directory exists
-				Directory.CreateDirectory(TargetLibPath);
-				
-				// Copy DLL if it doesn't exist or if source is newer
-				if (File.Exists(SourceDll))
-				{
-					if (!File.Exists(TargetDll) || File.GetLastWriteTime(SourceDll) > File.GetLastWriteTime(TargetDll))
-					{
-						File.Copy(SourceDll, TargetDll, true);
-					}
-					
-					// Use the target path for runtime dependencies
-					PublicDelayLoadDLLs.Add("CapabilityDetectLibrary.dll");
-					RuntimeDependencies.Add(TargetDll);
-				}
-				else
-				{
-					System.Console.WriteLine("Source DLL not found at: " + SourceDll);
-				}
+				System.Console.WriteLine("ERROR: CapabilityDetectLibrary: Source directory not found at: " + SourceLibPath);
+				System.Console.WriteLine("ERROR: Expected path: D:\\GithubRepos\\UnrealCapabilityDetectExtended\\Plugins\\CapabilityDetect\\Source\\ThirdParty\\CapabilityDetectLibrary\\x64\\Release");
+				return; // Exit early if source directory doesn't exist
 			}
-			else
+			
+			// Check if the DLL file exists
+			string SourceDll = Path.Combine(SourceLibPath, "CapabilityDetectLibrary.dll");
+			if (!File.Exists(SourceDll))
 			{
-				System.Console.WriteLine("Source library path not found: " + SourceLibPath);
+				System.Console.WriteLine("ERROR: CapabilityDetectLibrary: DLL file not found at: " + SourceDll);
+				System.Console.WriteLine("ERROR: Expected DLL: D:\\GithubRepos\\UnrealCapabilityDetectExtended\\Plugins\\CapabilityDetect\\Source\\ThirdParty\\CapabilityDetectLibrary\\x64\\Release\\CapabilityDetectLibrary.dll");
+				return; // Exit early if DLL doesn't exist
 			}
+			
+			// Check if the LIB file exists
+			string SourceLib = Path.Combine(SourceLibPath, "CapabilityDetectLibrary.lib");
+			if (!File.Exists(SourceLib))
+			{
+				System.Console.WriteLine("ERROR: CapabilityDetectLibrary: LIB file not found at: " + SourceLib);
+				System.Console.WriteLine("ERROR: Expected LIB: D:\\GithubRepos\\UnrealCapabilityDetectExtended\\Plugins\\CapabilityDetect\\Source\\ThirdParty\\CapabilityDetectLibrary\\x64\\Release\\CapabilityDetectLibrary.lib");
+				return; // Exit early if LIB doesn't exist
+			}
+			
+			System.Console.WriteLine("CapabilityDetectLibrary: All source files found successfully");
+			
+			// Add source path for compilation
+			PublicIncludePaths.Add(SourceLibPath);
+			PublicAdditionalLibraries.Add(SourceLib);
+			
+			// Target path in project's main Binaries folder
+			string TargetLibPath = Path.Combine(ModuleDirectory, "..", "..", "..", "..", "..", "Binaries", "Win64");
+			
+			// Copy DLL to project's main Binaries folder and use that path for runtime
+			string TargetDll = Path.Combine(TargetLibPath, "CapabilityDetectLibrary.dll");
+			
+			// Ensure target directory exists
+			Directory.CreateDirectory(TargetLibPath);
+			
+			// Copy DLL if it doesn't exist or if source is newer
+			if (!File.Exists(TargetDll) || File.GetLastWriteTime(SourceDll) > File.GetLastWriteTime(TargetDll))
+			{
+				File.Copy(SourceDll, TargetDll, true);
+				System.Console.WriteLine("CapabilityDetectLibrary: DLL copied to: " + TargetDll);
+			}
+			
+			// Use the target path for runtime dependencies
+			PublicDelayLoadDLLs.Add("CapabilityDetectLibrary.dll");
+			RuntimeDependencies.Add(TargetDll);
+			
+			System.Console.WriteLine("CapabilityDetectLibrary: Module configured successfully");
+		}
+		else
+		{
+			System.Console.WriteLine("CapabilityDetectLibrary: Skipping non-Windows platform: " + Target.Platform);
 		}
 	}
 }

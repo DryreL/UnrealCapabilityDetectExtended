@@ -9,8 +9,7 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-				"Engine",
-				"CapabilityDetect"
+				"Engine"
 			]
 		}
 	],
@@ -18,10 +17,6 @@
 		{
 			"Name": "CapabilityDetect",
 			"Enabled": true
-		},
-		{
-			"Name": "DryreLUIEssentialsPlugin",
-			"Enabled": false
 		}
 	]
 }

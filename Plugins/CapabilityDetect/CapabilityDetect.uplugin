@@ -17,7 +17,7 @@
 		{
 			"Name": "CapabilityDetect",
 			"Type": "Runtime",
-			"LoadingPhase": "PostEngineInit",
+			"LoadingPhase": "Default",
 			"WhitelistPlatforms": [
 				"Win64"
 			]
