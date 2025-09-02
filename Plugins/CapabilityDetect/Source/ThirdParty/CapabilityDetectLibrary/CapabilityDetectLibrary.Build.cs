@@ -23,49 +23,17 @@ public class CapabilityDetectLibrary : ModuleRules
 	{
 		Type = ModuleType.External;
 
+		// Only include Windows-specific dependencies
 		if (Target.Platform == UnrealTargetPlatform.Win64)
 		{
-			// Add the import library
-			//PublicLibraryPaths.Add(Path.Combine(ModuleDirectory, "x64", "Release"));
+			string LibPath = Path.Combine(ModuleDirectory, "x64", "Release");
 			
-			//PublicAdditionalLibraries.Add("CapabilityDetectLibrary.lib");
-			//PublicAdditionalLibraries.Add("$(PluginDir)/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.lib");
-
-			/*
-			string LibAdditionalPath = Path.Combine(ModuleDirectory, "x64", "Release");
-			foreach (string file in Directory.GetFiles(LibAdditionalPath, "*lib"))
+			if (Directory.Exists(LibPath))
 			{
-				PublicAdditionalLibraries.Add(file);
+				PublicIncludePaths.Add(LibPath);
+				PublicAdditionalLibraries.Add(Path.Combine(LibPath, "CapabilityDetectLibrary.lib"));
+				PublicDelayLoadDLLs.Add(Path.Combine(LibPath, "CapabilityDetectLibrary.dll"));
 			}
-			*/
-
-			PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "x64", "Release"));
-			PublicAdditionalLibraries.Add("$(ModuleDir)/x64/Release/CapabilityDetectLibrary.lib");
-			PublicDelayLoadDLLs.Add("$(ModuleDir)/x64/Release/CapabilityDetectLibrary.dll");
-
-            // Delay-load the DLL, so we can load it from the right place first
-            //PublicDelayLoadDLLs.Add("$(PluginDir)/Source/ThirdParty/CapabilityDetectLibrary/x64/Release/CapabilityDetectLibrary.dll");
-
-            /*
-                        string LibDelayLoadPath = Path.Combine(ModuleDirectory, "x64", "Release");
-                        foreach (string file in Directory.GetFiles(LibDelayLoadPath, "*dll"))
-                        {
-                            PublicDelayLoadDLLs.Add(file);
-                        }
-            */
-        }
-        else if (Target.Platform == UnrealTargetPlatform.Mac)
-        {
-/*
-            string LibMacDelayLoadPath = Path.Combine(ModuleDirectory, "Mac", "Release");
-            foreach (string file in Directory.GetFiles(LibMacDelayLoadPath, "*dylib"))
-            {
-	            PublicDelayLoadDLLs.Add(file);
-            }
-*/
-			PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "Mac", "Release"));
-			PublicDelayLoadDLLs.Add("CapabilityDetectLibrary.dylib");
-
-        }
+		}
 	}
 }

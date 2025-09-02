@@ -25,24 +25,24 @@ public class CapabilityDetectDemo : ModuleRules
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
-        string BaseDirectory = Path.GetFullPath(Path.Combine(ModuleDirectory, "..", ".."));
-        string PluginDirectory = Path.Combine(BaseDirectory, "Plugins", "CapabilityDetect", "Binaries", "ThirdParty", "CapabilityDetectLibrary", "Win64");
-        
+        // Only add DLL dependencies on Windows platform
         if (Target.Platform == UnrealTargetPlatform.Win64)
         {
-	        // Add the required DLL as a runtime dependency
-	        string dllPath = Path.Combine(PluginDirectory, "CapabilityDetectLibrary.dll");
+            string BaseDirectory = Path.GetFullPath(Path.Combine(ModuleDirectory, "..", ".."));
+            string PluginDirectory = Path.Combine(BaseDirectory, "Plugins", "CapabilityDetect", "Binaries", "ThirdParty", "CapabilityDetectLibrary", "Win64");
+            
+            // Add the required DLL as a runtime dependency
+            string dllPath = Path.Combine(PluginDirectory, "CapabilityDetectLibrary.dll");
 
-	        if (File.Exists(dllPath))
-	        {
-		        RuntimeDependencies.Add(dllPath);
-		        PublicDelayLoadDLLs.Add("CapabilityDetectLibrary.dll");
-		        //PublicAdditionalLibraries.Add(DllPath); // If you need the static library as well
-	        }
-	        else
-	        {
-		        System.Console.WriteLine("DLL not found at path: " + dllPath);
-	        }
+            if (File.Exists(dllPath))
+            {
+                RuntimeDependencies.Add(dllPath);
+                PublicDelayLoadDLLs.Add("CapabilityDetectLibrary.dll");
+            }
+            else
+            {
+                System.Console.WriteLine("DLL not found at path: " + dllPath);
+            }
         }
 
         // Uncomment if you are using Slate UI

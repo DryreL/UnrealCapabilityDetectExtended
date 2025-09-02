@@ -30,7 +30,6 @@ public class CapabilityDetect : ModuleRules
 			new string[]
 			{
 				"Core",
-				"CapabilityDetectLibrary",
 				"Projects",
                 "SynthBenchmark"
 				// ... add other public dependencies that you statically link with here ...
@@ -50,6 +49,11 @@ public class CapabilityDetect : ModuleRules
             }
 		);
 		
+		// Only add CapabilityDetectLibrary dependency on Windows platform
+		if (Target.Platform == UnrealTargetPlatform.Win64)
+		{
+			PublicDependencyModuleNames.Add("CapabilityDetectLibrary");
+		}
 		
 		DynamicallyLoadedModuleNames.AddRange(
 			new string[]
