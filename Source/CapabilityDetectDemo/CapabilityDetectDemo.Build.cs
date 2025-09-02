@@ -22,6 +22,9 @@ public class CapabilityDetectDemo : ModuleRules
 	public CapabilityDetectDemo(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+		
+		// UE 5.4 compatibility - use Latest instead of specific version
+		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
@@ -29,6 +32,7 @@ public class CapabilityDetectDemo : ModuleRules
         if (Target.Platform == UnrealTargetPlatform.Win64)
         {
             string BaseDirectory = Path.GetFullPath(Path.Combine(ModuleDirectory, "..", ".."));
+            // Use Binaries folder path where DLL is automatically copied
             string PluginDirectory = Path.Combine(BaseDirectory, "Plugins", "CapabilityDetect", "Binaries", "ThirdParty", "CapabilityDetectLibrary", "Win64");
             
             // Add the required DLL as a runtime dependency
@@ -42,6 +46,7 @@ public class CapabilityDetectDemo : ModuleRules
             else
             {
                 System.Console.WriteLine("DLL not found at path: " + dllPath);
+                System.Console.WriteLine("Expected path: " + dllPath);
             }
         }
 

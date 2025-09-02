@@ -13,9 +13,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbd77131-be2e-4f96-8ab2-6c7cfb79e710" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectDemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CapabilityDetectDemo.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CapabilityDetectDemo.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRules/CapabilityDetectDemoModuleRules.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRules/CapabilityDetectDemoModuleRules.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/CapabilityDetect.uplugin" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/CapabilityDetect.uplugin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/CapabilityDetect/CapabilityDetect.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/CapabilityDetect/CapabilityDetect.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/CapabilityDetect/Private/CapabilityDetect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/CapabilityDetect/Private/CapabilityDetect.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/CapabilityDetectDemo/CapabilityDetectDemo.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CapabilityDetectDemo/CapabilityDetectDemo.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/CapabilityDetectDemoEditor.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CapabilityDetectDemoEditor.Target.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,22 +56,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;C++ Project.CapabilityDetectDemo.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ue__5.4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Inspections-C++&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.EpicGames.AspNet.executor": "Run",
+    "C++ Project.CapabilityDetectDemo.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "ue__5.4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Inspections-C++",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.EpicGames.AspNet">
     <configuration name="CapabilityDetectDemo" type="CppProject" factoryName="C++ Project">
       <configuration_1 setup="1">
@@ -488,7 +496,7 @@
         <option name="Build" />
       </method>
     </configuration>
-    <configuration name="EpicGames.AspNet" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+    <configuration name="EpicGames.AspNet" type="LaunchSettings" factoryName=".NET Launch Settings Profile" activateToolWindowBeforeRun="false">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/../../Program Files/Epic Games/UE_5.4/Engine/Source/Programs/Shared/EpicGames.AspNet/EpicGames.AspNet.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
       <option name="LAUNCH_PROFILE_NAME" value="EpicGames.AspNet" />
@@ -545,6 +553,8 @@
       <workItem from="1727105899540" duration="551000" />
       <workItem from="1755816665622" duration="622000" />
       <workItem from="1756799932754" duration="195000" />
+      <workItem from="1756801096970" duration="69000" />
+      <workItem from="1756802276239" duration="197000" />
     </task>
     <servers />
   </component>

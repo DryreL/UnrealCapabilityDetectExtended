@@ -18,6 +18,7 @@ void FCapabilityDetectModule::StartupModule()
 	// Add on the relative location of the third party dll and load it
 	FString LibraryPath;
 #if PLATFORM_WINDOWS
+	// Use Binaries folder path where DLL is automatically copied
 	LibraryPath = FPaths::Combine(*BaseDir, TEXT("/Binaries/ThirdParty/CapabilityDetectLibrary/Win64/CapabilityDetectLibrary.dll"));
 #endif // PLATFORM_WINDOWS
 

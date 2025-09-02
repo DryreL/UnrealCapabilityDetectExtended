@@ -31,7 +31,7 @@ public class CapabilityDetectDemoEditorTarget : TargetRules
 		// Override build environment settings
 		bOverrideBuildEnvironment = true;
 
-		DefaultBuildSettings = BuildSettingsVersion.V5;
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
 		bValidateFormatStrings = true;
 		WindowsPlatform.bStrictConformanceMode = true;
