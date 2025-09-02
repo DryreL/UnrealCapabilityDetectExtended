@@ -67,25 +67,34 @@ public class CapabilityDetectLibrary : ModuleRules
 			PublicIncludePaths.Add(SourceLibPath);
 			PublicAdditionalLibraries.Add(SourceLib);
 			
-			// Target path in project's main Binaries folder
-			string TargetLibPath = Path.Combine(ModuleDirectory, "..", "..", "..", "..", "..", "Binaries", "Win64");
+			// TARGET 1: Project's main Binaries folder (for shipping builds)
+			string ProjectBinariesPath = Path.Combine(ModuleDirectory, "..", "..", "..", "..", "..", "Binaries", "Win64");
+			string ProjectDllPath = Path.Combine(ProjectBinariesPath, "CapabilityDetectLibrary.dll");
 			
-			// Copy DLL to project's main Binaries folder and use that path for runtime
-			string TargetDll = Path.Combine(TargetLibPath, "CapabilityDetectLibrary.dll");
+			// TARGET 2: Plugin's own Binaries folder (for plugin loading)
+			string PluginBinariesPath = Path.Combine(ModuleDirectory, "..", "..", "..", "Binaries", "Win64");
+			string PluginDllPath = Path.Combine(PluginBinariesPath, "CapabilityDetectLibrary.dll");
 			
-			// Ensure target directory exists
-			Directory.CreateDirectory(TargetLibPath);
+			// Ensure both target directories exist
+			Directory.CreateDirectory(ProjectBinariesPath);
+			Directory.CreateDirectory(PluginBinariesPath);
 			
-			// Copy DLL if it doesn't exist or if source is newer
-			if (!File.Exists(TargetDll) || File.GetLastWriteTime(SourceDll) > File.GetLastWriteTime(TargetDll))
+			// Copy DLL to both locations
+			if (!File.Exists(ProjectDllPath) || File.GetLastWriteTime(SourceDll) > File.GetLastWriteTime(ProjectDllPath))
 			{
-				File.Copy(SourceDll, TargetDll, true);
-				System.Console.WriteLine("CapabilityDetectLibrary: DLL copied to: " + TargetDll);
+				File.Copy(SourceDll, ProjectDllPath, true);
+				System.Console.WriteLine("CapabilityDetectLibrary: DLL copied to project Binaries: " + ProjectDllPath);
 			}
 			
-			// Use the target path for runtime dependencies
+			if (!File.Exists(PluginDllPath) || File.GetLastWriteTime(SourceDll) > File.GetLastWriteTime(PluginDllPath))
+			{
+				File.Copy(SourceDll, PluginDllPath, true);
+				System.Console.WriteLine("CapabilityDetectLibrary: DLL copied to plugin Binaries: " + PluginDllPath);
+			}
+			
+			// Use the project's main Binaries path for runtime dependencies (shipping builds)
 			PublicDelayLoadDLLs.Add("CapabilityDetectLibrary.dll");
-			RuntimeDependencies.Add(TargetDll);
+			RuntimeDependencies.Add(ProjectDllPath);
 			
 			System.Console.WriteLine("CapabilityDetectLibrary: Module configured successfully");
 		}

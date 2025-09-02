@@ -5,64 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb61f671-2fac-41f8-a0dc-57eb8c89f600" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../../../.idea/.idea.CapabilityDetectDemo/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../.idea/.idea.CapabilityDetectDemo.dir/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.idea/.idea.CapabilityDetectDemo.dir/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../.idea/.idea.CapabilityDetectDemo/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../.idea/.idea.CapabilityDetectDemo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.idea/.idea.CapabilityDetectDemo/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../.idea/.idea.CapabilityDetectDemo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.idea/.idea.CapabilityDetectDemo/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../.vsconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.vsconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Build/Windows/Application.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../CapabilityDetectDemo.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../CapabilityDetectDemo.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../CapabilityDetectDemo.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../CapabilityDetectDemo.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../Intermediate/Build/BuildRules/CapabilityDetectDemoModuleRules.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Intermediate/Build/BuildRules/CapabilityDetectDemoModuleRules.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Intermediate/ProjectFiles/CapabilityDetectDemo.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Intermediate/ProjectFiles/CapabilityDetectDemo.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Intermediate/ProjectFiles/CapabilityDetectDemo.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Intermediate/ProjectFiles/CapabilityDetectDemo.vcxproj.filters" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Intermediate/ProjectFiles/CapabilityDetectDemo.vcxproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Intermediate/ProjectFiles/CapabilityDetectDemo.vcxproj.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CapabilityDetect.uplugin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CapabilityDetect.uplugin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CapabilityDetect/Public/CapabilityDetectBPLib.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../CapabilityDetect/Public/CapabilityDetectBPLib.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectLibrary/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectLibrary/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CapabilityDetectLibrary/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CapabilityDetectLibrary.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CapabilityDetectLibrary.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CapabilityDetectLibrary.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/CapabilityDetectLibrary.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Capabili.9B50F1F8.tlog/CL.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Capabili.9B50F1F8.tlog/CL.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Capabili.9B50F1F8.tlog/CL.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Capabili.9B50F1F8.tlog/CapabilityDetectLibrary.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Capabili.9B50F1F8.tlog/Cl.items.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Capabili.9B50F1F8.tlog/link.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Capabili.9B50F1F8.tlog/link.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Capabili.9B50F1F8.tlog/link.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Capabili.9B50F1F8.tlog/link.write.2u.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/CapabilityDetectLibrary.dll.recipe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/CapabilityDetectLibrary.exp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/CapabilityDetectLibrary.ilk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/CapabilityDetectLibrary.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/CapabilityDetectLibrary.vcxproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/vc143.idb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/vc143.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/Capabili.9B50F1F8.tlog/CL.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/Capabili.9B50F1F8.tlog/CL.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/Capabili.9B50F1F8.tlog/CapabilityDetectLibrary.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/Capabili.9B50F1F8.tlog/Cl.items.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/Capabili.9B50F1F8.tlog/cl.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/Capabili.9B50F1F8.tlog/link.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/Capabili.9B50F1F8.tlog/link.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/Capabili.9B50F1F8.tlog/link.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/Capabili.9B50F1F8.tlog/link.write.2u.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/CapabilityDetectLibrary.dll.recipe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/CapabilityDetectLibrary.exp" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Release/CapabilityDetectLibrary.exp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/CapabilityDetectLibrary.iobj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/CapabilityDetectLibrary.ipdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/CapabilityDetectLibrary.lib" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Release/CapabilityDetectLibrary.lib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/CapabilityDetectLibrary.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/CapabilityDetectLibrary.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Release/CapabilityDetectLibrary.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/CapabilityDetectLibrary.vcxproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/vc143.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Source/CapabilityDetectDemo/CapabilityDetectDemo.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Source/CapabilityDetectDemo/CapabilityDetectDemo.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Source/CapabilityDetectDemo/PlatformConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Source/CapabilityDetectDemo/PlatformConfig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Source/CapabilityDetectDemo/PlatformTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Source/CapabilityDetectDemo/PlatformTest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Source/CapabilityDetectDemoEditor.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Source/CapabilityDetectDemoEditor.Target.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,19 +24,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ue__5.4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "ue__5.4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -104,13 +48,33 @@
       <updated>1726149063796</updated>
       <workItem from="1726149066052" duration="312000" />
       <workItem from="1726153408717" duration="2000" />
+      <workItem from="1756842371828" duration="625000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
