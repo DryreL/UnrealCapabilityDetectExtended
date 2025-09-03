@@ -12,6 +12,7 @@
 	"SupportURL": "https://github.com/DryreL/UnrealCapabilityDetectExtended/discussions",
 	"EngineVersion": "5.4",
 	"CanContainContent": true,
+	"CanBeUsedWithUnrealHeaderTool": false,
 	"Installed": true,
 	"Modules": [
 		{
