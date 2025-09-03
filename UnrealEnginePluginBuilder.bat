@@ -6,7 +6,7 @@ REM Plugin name (.uplugin file name without extension)
 set "PLUGIN_NAME=CapabilityDetect"
 
 REM Engine directory
-set "ENGINE_DIR=D:\Program Files\Epic Games\UE_5.4"
+set "ENGINE_DIR=D:\Program Files\Epic Games\UE_5.5"
 
 REM Plugin directory path
 set "PLUGIN_PATH=D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\%PLUGIN_NAME%"
