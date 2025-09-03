@@ -1,9 +1,3 @@
-@echo off
-echo ========================================
-echo    %PLUGIN_NAME% Plugin Builder
-echo ========================================
-echo.
-
 REM ========================================
 REM EDITABLE PATHS - Edit these sections
 REM ========================================
@@ -11,7 +5,7 @@ REM ========================================
 REM Plugin name (.uplugin file name without extension)
 set "PLUGIN_NAME=CapabilityDetect"
 
-REM Engine directory (for UE 5.4)
+REM Engine directory
 set "ENGINE_DIR=D:\Program Files\Epic Games\UE_5.4"
 
 REM Plugin directory path
@@ -22,6 +16,12 @@ set "BUILD_OUTPUT=D:\GithubRepos\UnrealCapabilityDetectExtended\UnrealEnginePlug
 
 REM Build.cs file path for auto-update (in build output, not original)
 set "BUILD_CS_PATH=%BUILD_OUTPUT%\Source\%PLUGIN_NAME%\%PLUGIN_NAME%.Build.cs"
+
+@echo off
+echo ========================================
+echo    %PLUGIN_NAME% Plugin Builder
+echo ========================================
+echo.
 
 REM ========================================
 REM Automatic checks
@@ -104,11 +104,6 @@ echo.
     REM ========================================
     echo Updating Build.cs file...
     echo.
-    
-    REM Create backup of original file
-    set "BACKUP_FILE=%BUILD_CS_PATH%.backup"
-    copy "%BUILD_CS_PATH%" "%BACKUP_FILE%" >nul
-    echo Backup created: %BACKUP_FILE%
     
     REM Update bPrecompile to bUsePrecompiled
     echo Replacing bPrecompile=true with bUsePrecompiled=true...
