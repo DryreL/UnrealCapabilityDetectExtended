@@ -17,6 +17,10 @@
 		{
 			"Name": "CapabilityDetect",
 			"Enabled": true
+		},
+		{
+			"Name": "OpenImageDenoise",
+			"Enabled": false
 		}
 	]
 }
