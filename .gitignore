@@ -86,3 +86,4 @@ Intermediate/ProjectFiles/*
 *.sln
 UpgradeLog.htm
 *.user
+.vsconfig
