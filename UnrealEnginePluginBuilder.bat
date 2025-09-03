@@ -8,20 +8,20 @@ REM ========================================
 REM EDITABLE PATHS - Edit these sections
 REM ========================================
 
+REM Plugin name (.uplugin file name without extension)
+set "PLUGIN_NAME=CapabilityDetect"
+
 REM Engine directory (for UE 5.4)
 set "ENGINE_DIR=D:\Program Files\Epic Games\UE_5.4"
 
 REM Plugin directory path
 set "PLUGIN_PATH=D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\%PLUGIN_NAME%"
 
-REM Plugin name (.uplugin file name without extension)
-set "PLUGIN_NAME=CapabilityDetect"
-
 REM Build output directory
 set "BUILD_OUTPUT=D:\GithubRepos\UnrealCapabilityDetectExtended\UnrealEnginePluginBuilder\%PLUGIN_NAME%"
 
-REM Build.cs file path for auto-update
-set "BUILD_CS_PATH=%PLUGIN_PATH%\Source\%PLUGIN_NAME%\%PLUGIN_NAME%.Build.cs"
+REM Build.cs file path for auto-update (in build output, not original)
+set "BUILD_CS_PATH=%BUILD_OUTPUT%\Source\%PLUGIN_NAME%\%PLUGIN_NAME%.Build.cs"
 
 REM ========================================
 REM Automatic checks
@@ -43,15 +43,6 @@ REM Plugin file check
 if not exist "%PLUGIN_PATH%\%PLUGIN_NAME%.uplugin" (
     echo ERROR: Plugin file not found!
     echo Please check PLUGIN_PATH: %PLUGIN_PATH%
-    echo.
-    pause
-    exit /b 1
-)
-
-REM Build.cs file check
-if not exist "%BUILD_CS_PATH%" (
-    echo ERROR: Build.cs file not found!
-    echo Please check BUILD_CS_PATH: %BUILD_CS_PATH%
     echo.
     pause
     exit /b 1
@@ -81,21 +72,32 @@ echo.
 echo Executing build command...
 echo.
 
-"%ENGINE_DIR%\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Plugin="%PLUGIN_PATH%\%PLUGIN_NAME%.uplugin" -Package="%BUILD_OUTPUT%" -TargetPlatforms=Win64 -Rocket -precompile
+start "Plugin Build" cmd /k ""%ENGINE_DIR%\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Plugin="%PLUGIN_PATH%\%PLUGIN_NAME%.uplugin" -Package="%BUILD_OUTPUT%" -TargetPlatforms=Win64 -Rocket -precompile"
 
+REM Wait for build to complete (check if output files exist)
+echo Waiting for build to complete...
+:WAIT_LOOP
+timeout /t 10 /nobreak >nul
+if exist "%BUILD_OUTPUT%\Source\%PLUGIN_NAME%\%PLUGIN_NAME%.Build.cs" (
+    echo Build completed! Starting post-build operations...
+    goto POST_BUILD
+) else (
+    echo Still waiting for build to complete...
+    goto WAIT_LOOP
+)
+
+:POST_BUILD
 REM ========================================
 REM Result check and auto-update
 REM ========================================
-
-if %ERRORLEVEL% EQU 0 (
-    echo.
-    echo ========================================
-    echo    BUILD SUCCESSFUL!
-    echo ========================================
-    echo.
-    echo Plugin built successfully!
-    echo Output directory: %BUILD_OUTPUT%
-    echo.
+echo.
+echo ========================================
+echo    BUILD SUCCESSFUL!
+echo ========================================
+echo.
+echo Plugin built successfully!
+echo Output directory: %BUILD_OUTPUT%
+echo.
     
     REM ========================================
     REM Auto-update Build.cs file
