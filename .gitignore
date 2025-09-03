@@ -83,3 +83,5 @@ Plugins/CapabilityDetect/Source/ThirdParty/CapabilityDetectLibrary/Capabili.9B50
 Intermediate/ProjectFiles/*
 /Content/StarterContent
 /UnrealEnginePluginBuilder
+*.sln
+UpgradeLog.htm
