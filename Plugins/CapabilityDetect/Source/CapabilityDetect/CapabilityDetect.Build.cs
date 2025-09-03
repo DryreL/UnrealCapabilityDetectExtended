@@ -11,6 +11,9 @@ public class CapabilityDetect : ModuleRules
 		// UE 5.4 compatibility - use Latest instead of specific version
 		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
 		
+		// Enable precompiled builds for all targets
+		PrecompileForTargets = PrecompileTargetsType.Any;
+		
 		PublicIncludePaths.AddRange(
 			new string[] {
 				//"CapabilityDetect/Public",
