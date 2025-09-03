@@ -6,7 +6,7 @@ REM Plugin name (.uplugin file name without extension)
 set "PLUGIN_NAME=CapabilityDetect"
 
 REM Engine directory
-set "ENGINE_DIR=D:\Program Files\Epic Games\UE_5.5"
+set "ENGINE_DIR=D:\Program Files\Epic Games\UE_5.6"
 
 REM Plugin directory path
 set "PLUGIN_PATH=D:\GithubRepos\UnrealCapabilityDetectExtended\Plugins\%PLUGIN_NAME%"
@@ -108,8 +108,8 @@ echo.
     REM Update bPrecompile to bUsePrecompiled
     echo Replacing bPrecompile=true with bUsePrecompiled=true...
     
-    REM Use PowerShell to perform the replacement
-    powershell -Command "(Get-Content '%BUILD_CS_PATH%') -replace 'bPrecompile = true;', 'bUsePrecompiled = true;' | Set-Content '%BUILD_CS_PATH%'"
+    REM Use PowerShell to perform the replacement (fixed command)
+    powershell -Command "$content = Get-Content '%BUILD_CS_PATH%'; $content = $content -replace 'bPrecompile = true;', 'bUsePrecompiled = true;'; Set-Content '%BUILD_CS_PATH%' -Value $content"
     
     if %ERRORLEVEL% EQU 0 (
         echo Build.cs file updated successfully!
@@ -131,10 +131,12 @@ echo.
     echo 4. Remove plugin from project directory
     echo.
     echo Build and update completed successfully!
-    echo CMD window will remain open for you to review.
+    echo.
+    echo Plugin is ready for use!
     echo.
     echo Press any key to close this window...
     pause >nul
+    exit /b 0
 ) else (
     echo.
     echo ========================================
@@ -145,8 +147,8 @@ echo.
     echo Please check error messages above.
     echo.
     echo Build failed! No changes made to Build.cs file.
-    echo CMD window will remain open for you to review errors.
     echo.
     echo Press any key to close this window...
     pause >nul
+    exit /b 1
 )
