@@ -1,6 +1,7 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
 using UnrealBuildTool;
+using System.IO;
 
 public class CapabilityDetect : ModuleRules
 {
@@ -14,10 +15,6 @@ public class CapabilityDetect : ModuleRules
 		// Enable precompiled builds for all targets
 		PrecompileForTargets = PrecompileTargetsType.Any;
 		bPrecompile = true;
-		
-		//After building the plugin is done add/replace bPrecompile=true with bUsePrecompiled = true
-		//Delete all the .cpp files (in the source and intermediate folders) (Untested: you can even delete the header files but then you can’t extend the cpp classes anymore)
-		//Your plugin is now ready to use without the source code
 		
 		PublicIncludePaths.AddRange(
 			new string[] {
@@ -64,6 +61,28 @@ public class CapabilityDetect : ModuleRules
 		if (Target.Platform == UnrealTargetPlatform.Win64)
 		{
 			PublicDependencyModuleNames.Add("CapabilityDetectLibrary");
+			
+			// Ensure DLL is copied to packaged game
+			// This is required for the plugin to work when installed in Engine
+			PublicDelayLoadDLLs.Add("CapabilityDetectLibrary.dll");
+			
+			// Add runtime dependency for packaging
+			// This ensures the DLL is included in the final game package
+			RuntimeDependencies.Add("$(TargetOutputDir)/CapabilityDetectLibrary.dll");
+			
+			// Also add the DLL from the plugin's Binaries folder as fallback
+			string PluginBinariesPath = Path.Combine(ModuleDirectory, "..", "..", "Binaries", "Win64");
+			string PluginDllPath = Path.Combine(PluginBinariesPath, "CapabilityDetectLibrary.dll");
+			
+			if (File.Exists(PluginDllPath))
+			{
+				RuntimeDependencies.Add(PluginDllPath);
+				System.Console.WriteLine("CapabilityDetect: Added plugin DLL to runtime dependencies: " + PluginDllPath);
+			}
+			else
+			{
+				System.Console.WriteLine("CapabilityDetect: Plugin DLL not found at: " + PluginDllPath);
+			}
 		}
 		
 		// UE 5.4 compatibility - ensure proper module loading
