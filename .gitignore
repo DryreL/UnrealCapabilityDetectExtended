@@ -85,3 +85,4 @@ Intermediate/ProjectFiles/*
 /UnrealEnginePluginBuilder
 *.sln
 UpgradeLog.htm
+*.user
