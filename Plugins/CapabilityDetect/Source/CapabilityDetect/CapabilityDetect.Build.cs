@@ -13,6 +13,11 @@ public class CapabilityDetect : ModuleRules
 		
 		// Enable precompiled builds for all targets
 		PrecompileForTargets = PrecompileTargetsType.Any;
+		bPrecompile = true;
+		
+		//After building the plugin is done add/replace bPrecompile=true with bUsePrecompiled = true
+		//Delete all the .cpp files (in the source and intermediate folders) (Untested: you can even delete the header files but then you can’t extend the cpp classes anymore)
+		//Your plugin is now ready to use without the source code
 		
 		PublicIncludePaths.AddRange(
 			new string[] {
