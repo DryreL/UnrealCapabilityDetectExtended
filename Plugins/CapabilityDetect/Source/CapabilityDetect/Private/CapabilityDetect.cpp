@@ -1,12 +1,15 @@
-// Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
+// Copyright 2025 Epic Games, Inc. and Intel Corporation. All Rights Reserved.
 
 #include "CapabilityDetect.h"
-#include "Core.h"
+#include "CoreMinimal.h"
+#include "Misc/MessageDialog.h"
 #include "Modules/ModuleManager.h"
 #include "Interfaces/IPluginManager.h"
 #include "ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.h"
 
 #define LOCTEXT_NAMESPACE "FCapabilityDetectModule"
+
+DEFINE_LOG_CATEGORY(LogCapabilityDetect);
 
 void FCapabilityDetectModule::StartupModule()
 {
@@ -23,32 +26,39 @@ void FCapabilityDetectModule::StartupModule()
 	FString ProjectDllPath = FPaths::Combine(*ProjectBinariesPath, TEXT("CapabilityDetectLibrary.dll"));
 	
 	// PATH 2: Plugin's own Binaries folder (for plugin loading)
-	FString PluginBaseDir = IPluginManager::Get().FindPlugin("CapabilityDetect")->GetBaseDir();
+	TSharedPtr<IPlugin> Plugin = IPluginManager::Get().FindPlugin("CapabilityDetect");
+	if (!Plugin.IsValid())
+	{
+		UE_LOG(LogCapabilityDetect, Error, TEXT("CapabilityDetect: Could not find plugin descriptor!"));
+		return;
+	}
+	
+	FString PluginBaseDir = Plugin->GetBaseDir();
 	FString PluginBinariesPath = FPaths::Combine(*PluginBaseDir, TEXT("Binaries"), TEXT("Win64"));
 	FString PluginDllPath = FPaths::Combine(*PluginBinariesPath, TEXT("CapabilityDetectLibrary.dll"));
 	
 	// Log all paths for debugging
-	UE_LOG(LogTemp, Log, TEXT("CapabilityDetect: Project root: %s"), *ProjectRoot);
-	UE_LOG(LogTemp, Log, TEXT("CapabilityDetect: Project Binaries path: %s"), *ProjectBinariesPath);
-	UE_LOG(LogTemp, Log, TEXT("CapabilityDetect: Plugin base dir: %s"), *PluginBaseDir);
-	UE_LOG(LogTemp, Log, TEXT("CapabilityDetect: Plugin Binaries path: %s"), *PluginBinariesPath);
+	UE_LOG(LogCapabilityDetect, Log, TEXT("CapabilityDetect: Project root: %s"), *ProjectRoot);
+	UE_LOG(LogCapabilityDetect, Log, TEXT("CapabilityDetect: Project Binaries path: %s"), *ProjectBinariesPath);
+	UE_LOG(LogCapabilityDetect, Log, TEXT("CapabilityDetect: Plugin base dir: %s"), *PluginBaseDir);
+	UE_LOG(LogCapabilityDetect, Log, TEXT("CapabilityDetect: Plugin Binaries path: %s"), *PluginBinariesPath);
 	
 	// Try to find DLL in either location
 	if (FPaths::FileExists(ProjectDllPath))
 	{
 		LibraryPath = ProjectDllPath;
-		UE_LOG(LogTemp, Log, TEXT("CapabilityDetect: DLL found in project Binaries: %s"), *LibraryPath);
+		UE_LOG(LogCapabilityDetect, Log, TEXT("CapabilityDetect: DLL found in project Binaries: %s"), *LibraryPath);
 	}
 	else if (FPaths::FileExists(PluginDllPath))
 	{
 		LibraryPath = PluginDllPath;
-		UE_LOG(LogTemp, Log, TEXT("CapabilityDetect: DLL found in plugin Binaries: %s"), *LibraryPath);
+		UE_LOG(LogCapabilityDetect, Log, TEXT("CapabilityDetect: DLL found in plugin Binaries: %s"), *LibraryPath);
 	}
 	else
 	{
 		// DLL not found in either location
 		FString ErrorMessage = FString::Printf(TEXT("CapabilityDetect: DLL file not found in either location:\nProject: %s\nPlugin: %s"), *ProjectDllPath, *PluginDllPath);
-		UE_LOG(LogTemp, Error, TEXT("%s"), *ErrorMessage);
+		UE_LOG(LogCapabilityDetect, Error, TEXT("%s"), *ErrorMessage);
 		
 		// Show error dialog in editor builds
 	#if WITH_EDITOR
@@ -58,21 +68,21 @@ void FCapabilityDetectModule::StartupModule()
 		return; // Exit early if DLL doesn't exist
 	}
 	
-	UE_LOG(LogTemp, Log, TEXT("CapabilityDetect: Attempting to load DLL from: %s"), *LibraryPath);
+	UE_LOG(LogCapabilityDetect, Log, TEXT("CapabilityDetect: Attempting to load DLL from: %s"), *LibraryPath);
 #endif // PLATFORM_WINDOWS
 
 	CapabilityDetectLibraryHandle = !LibraryPath.IsEmpty() ? FPlatformProcess::GetDllHandle(*LibraryPath) : nullptr;
 
 	if (CapabilityDetectLibraryHandle)
 	{
-		UE_LOG(LogTemp, Log, TEXT("CapabilityDetect: DLL loaded successfully from: %s"), *LibraryPath);
+		UE_LOG(LogCapabilityDetect, Log, TEXT("CapabilityDetect: DLL loaded successfully from: %s"), *LibraryPath);
 		Intel_InitializeResources();
 	}
 	else
 	{
 		// Log the error but don't show dialog in shipping builds
 		FString ErrorMessage = FString::Printf(TEXT("CapabilityDetect: Failed to load capability detect library from: %s"), *LibraryPath);
-		UE_LOG(LogTemp, Warning, TEXT("%s"), *ErrorMessage);
+		UE_LOG(LogCapabilityDetect, Warning, TEXT("%s"), *ErrorMessage);
 		
 		// Only show dialog in editor builds
 	#if WITH_EDITOR
@@ -86,11 +96,12 @@ void FCapabilityDetectModule::ShutdownModule()
 	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
 	// we call this function before unloading the module.
 	
-	Intel_FreeResources();
-
-	// Free the dll handle
-	FPlatformProcess::FreeDllHandle(CapabilityDetectLibraryHandle);
-	CapabilityDetectLibraryHandle = nullptr;
+	if (CapabilityDetectLibraryHandle)
+	{
+		Intel_FreeResources();
+		FPlatformProcess::FreeDllHandle(CapabilityDetectLibraryHandle);
+		CapabilityDetectLibraryHandle = nullptr;
+	}
 }
 
 #undef LOCTEXT_NAMESPACE

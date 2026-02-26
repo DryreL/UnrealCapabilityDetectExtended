@@ -16,23 +16,36 @@
 
 #include "CapabilityDetectBPLib.h"
 #include "ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.h"
-#include "Runtime/RHI/Public/RHI.h"
-#include "Runtime/ApplicationCore/Public/HAL/PlatformSurvey.h"
+#include "RHI.h"
+#include "RHIGlobals.h"
+#include "RHIStrings.h"
 #include "SynthBenchmark.h"
+#include "GenericPlatform/GenericPlatformSurvey.h"
+#include "HAL/PlatformMemory.h"
+#include "GenericPlatform/GenericPlatformMisc.h"
+#include "Misc/App.h"
 
 void UCapabilityDetectBPLib::InitializeResources()
 {
+#if PLATFORM_WINDOWS
 	Intel_InitializeResources();
+#endif
 }
 
 void UCapabilityDetectBPLib::FreeResources()
 {
+#if PLATFORM_WINDOWS
 	Intel_FreeResources();
+#endif
 }
 
 bool UCapabilityDetectBPLib::IsIntelCPU()
 {
+#if PLATFORM_WINDOWS
 	return Intel_IsIntelCPU();
+#else
+	return FPlatformMisc::GetCPUVendor().Contains("Intel");
+#endif
 }
 
 float UCapabilityDetectBPLib::ComputeGPUPerfIndex()
@@ -41,7 +54,7 @@ float UCapabilityDetectBPLib::ComputeGPUPerfIndex()
 	static FSynthBenchmarkResults synthBenchResults;
 
 	if (!bRunOnce) {
-		ISynthBenchmark::Get().Run(synthBenchResults);
+		ISynthBenchmark::Get().Run(synthBenchResults, true);
 		bRunOnce = true;
 	}
 
@@ -61,69 +74,121 @@ float UCapabilityDetectBPLib::ComputeCPUPerfIndex()
 	return synthBenchResults.ComputeCPUPerfIndex();
 }
 
-int UCapabilityDetectBPLib::GetNumLogicalCores()
+int32 UCapabilityDetectBPLib::GetNumLogicalCores()
 {
+#if PLATFORM_WINDOWS
 	return Intel_GetNumLogicalCores();
+#else
+	return FPlatformMisc::NumberOfCoresIncludingHyperthreads();
+#endif
+}
+
+int32 UCapabilityDetectBPLib::GetNumPhysicalCores()
+{
+#if PLATFORM_WINDOWS
+	return Intel_GetNumPhysicalCores();
+#else
+	return FPlatformMisc::NumberOfCores();
+#endif
+}
+
+bool UCapabilityDetectBPLib::IsHyperThreadingEnabled()
+{
+	return GetNumLogicalCores() > GetNumPhysicalCores();
 }
 
 float UCapabilityDetectBPLib::GetUsablePhysMemoryGB()
 {
-	return Intel_GetUsablePhysMemoryGB();
+#if PLATFORM_WINDOWS
+	float IntelMem = Intel_GetUsablePhysMemoryGB();
+	if (IntelMem > 0.f) return IntelMem;
+#endif
+	return FPlatformMemory::GetStats().TotalPhysicalGB;
 }
 
 float UCapabilityDetectBPLib::GetComittedMemoryMB()
 {
-	return Intel_GetComittedMemoryMB();
+#if PLATFORM_WINDOWS
+	float IntelMem = Intel_GetComittedMemoryMB();
+	if (IntelMem > 0.f) return IntelMem;
+#endif
+	return static_cast<float>(FPlatformMemory::GetStats().UsedPhysical / (1024ULL * 1024ULL));
 }
 
 float UCapabilityDetectBPLib::GetAvailableMemoryMB()
 {
-	return Intel_GetAvailableMemoryMB();
+#if PLATFORM_WINDOWS
+	float IntelMem = Intel_GetAvailableMemoryMB();
+	if (IntelMem > 0.f) return IntelMem;
+#endif
+	return static_cast<float>(FPlatformMemory::GetStats().AvailablePhysical / (1024ULL * 1024ULL));
 }
 
 float UCapabilityDetectBPLib::GetCacheSizeMB()
 {
+#if PLATFORM_WINDOWS
 	return Intel_GetCacheSizeMB();
+#else
+	return 0.0f;
+#endif
 }
 
 float UCapabilityDetectBPLib::GetMaxBaseFrequency()
 {
+#if PLATFORM_WINDOWS
 	return Intel_GetMaxBaseFrequency();
-}
-
-int UCapabilityDetectBPLib::GetNumPhysicalCores()
-{
-	return Intel_GetNumPhysicalCores();
+#else
+	return 0.0f;
+#endif
 }
 
 float UCapabilityDetectBPLib::GetCoreFrequency()
 {
+#if PLATFORM_WINDOWS
 	return Intel_GetCoreFrequency();
+#else
+	return 0.0f;
+#endif
 }
 
 float UCapabilityDetectBPLib::GetCorePercMaxFrequency()
 {
+#if PLATFORM_WINDOWS
 	return Intel_GetCorePercMaxFrequency();
+#else
+	return 0.0f;
+#endif
 }
 
 FString UCapabilityDetectBPLib::GetFullProcessorName()
 {
+#if PLATFORM_WINDOWS
 	const int bufferSize = 512;
 	char buffer[bufferSize];
-
-	Intel_GetFullProcessorName(buffer, (int*)&bufferSize);
-
+	int size = bufferSize;
+	Intel_GetFullProcessorName(buffer, &size);
 	return FString(ANSI_TO_TCHAR(buffer));
+#else
+	return FPlatformMisc::GetCPUBrand();
+#endif
 }
 
 FString UCapabilityDetectBPLib::GetProcessorName()
 {
+#if PLATFORM_WINDOWS
 	const int bufferSize = 512;
 	char buffer[bufferSize];
-
-	Intel_GetProcessorName(buffer, (int*)&bufferSize);
-
+	int size = bufferSize;
+	Intel_GetProcessorName(buffer, &size);
 	return FString(ANSI_TO_TCHAR(buffer));
+#else
+	return FPlatformMisc::GetCPUBrand();
+#endif
+}
+
+FString UCapabilityDetectBPLib::GetCPUVendorName()
+{
+	return FPlatformMisc::GetCPUVendor();
 }
 
 bool UCapabilityDetectBPLib::IsRHIIntel()
@@ -144,4 +209,14 @@ bool UCapabilityDetectBPLib::IsRHINVIDIA()
 FName UCapabilityDetectBPLib::RHIVendorName()
 {
 	return FName(RHIVendorIdToString());
+}
+
+FString UCapabilityDetectBPLib::GetRHIAdapterDescription()
+{
+	return GRHIAdapterName;
+}
+
+FString UCapabilityDetectBPLib::GetRHIShaderPlatformName()
+{
+	return LegacyShaderPlatformToShaderFormat(GMaxRHIShaderPlatform).ToString();
 }

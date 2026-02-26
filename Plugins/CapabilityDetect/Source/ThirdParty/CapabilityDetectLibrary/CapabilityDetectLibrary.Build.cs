@@ -39,7 +39,6 @@ public class CapabilityDetectLibrary : ModuleRules
 			if (!Directory.Exists(SourceLibPath))
 			{
 				System.Console.WriteLine("ERROR: CapabilityDetectLibrary: Source directory not found at: " + SourceLibPath);
-				System.Console.WriteLine("ERROR: Expected path: D:\\GithubRepos\\UnrealCapabilityDetectExtended\\Plugins\\CapabilityDetect\\Source\\ThirdParty\\CapabilityDetectLibrary\\x64\\Release");
 				return; // Exit early if source directory doesn't exist
 			}
 			
@@ -48,7 +47,6 @@ public class CapabilityDetectLibrary : ModuleRules
 			if (!File.Exists(SourceDll))
 			{
 				System.Console.WriteLine("ERROR: CapabilityDetectLibrary: DLL file not found at: " + SourceDll);
-				System.Console.WriteLine("ERROR: Expected DLL: D:\\GithubRepos\\UnrealCapabilityDetectExtended\\Plugins\\CapabilityDetect\\Source\\ThirdParty\\CapabilityDetectLibrary\\x64\\Release\\CapabilityDetectLibrary.dll");
 				return; // Exit early if DLL doesn't exist
 			}
 			
@@ -57,14 +55,13 @@ public class CapabilityDetectLibrary : ModuleRules
 			if (!File.Exists(SourceLib))
 			{
 				System.Console.WriteLine("ERROR: CapabilityDetectLibrary: LIB file not found at: " + SourceLib);
-				System.Console.WriteLine("ERROR: Expected LIB: D:\\GithubRepos\\UnrealCapabilityDetectExtended\\Plugins\\CapabilityDetect\\Source\\ThirdParty\\CapabilityDetectLibrary\\x64\\Release\\CapabilityDetectLibrary.lib");
 				return; // Exit early if LIB doesn't exist
 			}
 			
 			System.Console.WriteLine("CapabilityDetectLibrary: All source files found successfully");
 			
-			// Add source path for compilation
-			PublicIncludePaths.Add(SourceLibPath);
+			// Add source path for compilation (headers are in ModuleDirectory)
+			PublicIncludePaths.Add(ModuleDirectory);
 			PublicAdditionalLibraries.Add(SourceLib);
 			
 			// TARGET 1: Project's main Binaries folder (for shipping builds)

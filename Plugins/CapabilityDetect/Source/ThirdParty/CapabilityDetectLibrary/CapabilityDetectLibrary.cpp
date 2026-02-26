@@ -138,7 +138,10 @@ DLLEXPORT double Intel_GetUsablePhysMemoryGB()
 DLLEXPORT void Intel_FreeResources()
 {
 	if (collector)
+	{
 		delete collector;
+		collector = nullptr;
+	}
 }
 
 DLLEXPORT void Intel_GetSKU(char **cpuSKU, int* bufferSize)
@@ -149,7 +152,7 @@ DLLEXPORT void Intel_GetSKU(char **cpuSKU, int* bufferSize)
 		if (*bufferSize > (int)str.size())
 		{
 			*cpuSKU = new char[*bufferSize];
-			int r1 = strncpy_s(*cpuSKU, str.size() + 1, str.c_str(), str.size());
+			strncpy_s(*cpuSKU, *bufferSize, str.c_str(), str.size());
 		}
 	}
 }
@@ -161,7 +164,7 @@ DLLEXPORT void Intel_GetFullProcessorName(char* cpuSKU, int* bufferSize)
 		std::string str = collector->GetFullProcessorNameString();
 		if (*bufferSize > (int)str.size())
 		{
-			int r1 = strncpy_s(cpuSKU, str.size() + 1, str.c_str(), str.size());
+			strncpy_s(cpuSKU, *bufferSize, str.c_str(), str.size());
 		}
 	}
 }
@@ -173,7 +176,7 @@ DLLEXPORT void Intel_GetProcessorName(char* cpuSKU, int* bufferSize)
 		std::string str = collector->GetProcessorName();
 		if (*bufferSize > (int)str.size())
 		{
-			int r1 = strncpy_s(cpuSKU, str.size() + 1, str.c_str(), str.size());
+			strncpy_s(cpuSKU, *bufferSize, str.c_str(), str.size());
 		}
 	}
 }

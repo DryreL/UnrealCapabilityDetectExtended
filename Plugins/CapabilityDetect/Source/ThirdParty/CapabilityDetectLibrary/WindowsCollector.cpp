@@ -18,15 +18,8 @@
 #include "StatsCollector.h"
 #include <algorithm>
 #include <iterator>
-#include <iostream>
 #include <string>
-#include <assert.h>
-#include <Psapi.h>
-#include <D3D11.h>
-#include <dxdiag.h>
 #include <windows.h>
-#pragma comment (lib, "SetupAPI.lib")
-#include <SetupAPI.h>
 #include <regex>
 #include <intrin.h>
 
@@ -53,15 +46,16 @@ size_t cache_l3_size() {
 
 	GetLogicalProcessorInformation(0, &buffer_size);
 	buffer = (SYSTEM_LOGICAL_PROCESSOR_INFORMATION *)malloc(buffer_size);
-	GetLogicalProcessorInformation(&buffer[0], &buffer_size);
-	for (i = 0; i != buffer_size / sizeof(SYSTEM_LOGICAL_PROCESSOR_INFORMATION); ++i) {
-		if (buffer[i].Relationship == RelationCache && buffer[i].Cache.Level == 3) {
-			size = buffer[i].Cache.Size;
-			break;
+	if (buffer) {
+		GetLogicalProcessorInformation(&buffer[0], &buffer_size);
+		for (i = 0; i != buffer_size / sizeof(SYSTEM_LOGICAL_PROCESSOR_INFORMATION); ++i) {
+			if (buffer[i].Relationship == RelationCache && buffer[i].Cache.Level == 3) {
+				size = buffer[i].Cache.Size;
+				break;
+			}
 		}
+		free(buffer);
 	}
-
-	free(buffer);
 	return size;
 }
 
@@ -96,7 +90,7 @@ void InfoCollector::SetCPUBrandString()
 		}
 	}
 	catch (std::regex_error& e) {
-		std::cerr << e.what() << std::endl;
+		mProcessorName = std::string("");
 	}
 }
 
@@ -162,29 +156,28 @@ void InfoCollector::InitializeData()
 	PDH_STATUS Status = PdhOpenQuery(NULL, NULL, &mQueryHandle);
 
 	if (Status != ERROR_SUCCESS) {
-		std::cout << "nPdhOpenQuery failed with status " << Status << std::endl;
 		if (mQueryHandle) {
 			PdhCloseQuery(mQueryHandle);
+			mQueryHandle = NULL;
 		}
 	}
 
-	for (auto& it : mMetricsVec) {
-		PDH_STATUS status = PdhAddCounter(mQueryHandle, (WCHAR*)(it)->mPDHPath.c_str(), 0, &((it)->mPDHCounter));
+	if (mQueryHandle) {
+		for (auto& it : mMetricsVec) {
+			PdhAddCounter(mQueryHandle, (WCHAR*)(it)->mPDHPath.c_str(), 0, &((it)->mPDHCounter));
+		}
 
-		if (status != ERROR_SUCCESS)
-		{
-			std::cout << "nPdhAddCounter " << (it)->mMetricName << " failed with status " << Status << std::endl;
+		PDH_STATUS status = PdhCollectQueryData(mQueryHandle);
+
+		if (status != ERROR_SUCCESS) {
+			PdhCloseQuery(mQueryHandle);
+			mQueryHandle = NULL;
 		}
 	}
 
-	PDH_STATUS status = PdhCollectQueryData(mQueryHandle);
-
-	if (status != ERROR_SUCCESS) {
-		std::cout << "nPdhOpenQuery failed with status " << Status << std::endl;
-		PdhCloseQuery(mQueryHandle);
+	if (mQueryHandle) {
+		CollectPDHData();
 	}
-
-	CollectPDHData();
 }
 
 InfoCollector::InfoCollector()
@@ -213,22 +206,22 @@ float InfoCollector::GetUsablePhysMemoryGB()
 }
 
 void InfoCollector::CollectPDHData() {
+	if (!mQueryHandle) return;
+	
 	PDH_FMT_COUNTERVALUE DisplayValue;
 	PDH_STATUS status = PdhCollectQueryData(mQueryHandle);
 
 	if (status != ERROR_SUCCESS) {
-		std::cerr << "PdhCollectQueryData failed with " << status << std::endl;
-
 		PdhCloseQuery(mQueryHandle);
+		mQueryHandle = NULL;
 	}
 	else
 	{
 		for (auto& it : mMetricsVec) {
+			if (!(it)->mPDHCounter) continue;
+			
 			status = PdhGetFormattedCounterValue((it)->mPDHCounter, PDH_FMT_DOUBLE, &((it)->mCounterType), &DisplayValue);
-			if (status != ERROR_SUCCESS) {
-				std::cerr << "PdhGetFormattedCounterValue failed with status " << status << " on " << (it)->mMetricName << std::endl;
-			}
-			else {
+			if (status == ERROR_SUCCESS) {
 				if ((it)->mMetricName.compare(mMetricsVec[RSS_MEMORY_SIZE]->mMetricName) == 0)
 					(it)->SetCurrentValue(DisplayValue.doubleValue / (1024 * 1024));
 				else
@@ -238,10 +231,6 @@ void InfoCollector::CollectPDHData() {
 	}
 }
 
-typedef BOOL(WINAPI *GetLogicalProcessorInformation_TYPE)(
-	PSYSTEM_LOGICAL_PROCESSOR_INFORMATION,
-	PDWORD);
-
 void InfoCollector::GetCoreCounts()
 {
 	SYSTEM_INFO systemInfo;
@@ -249,35 +238,33 @@ void InfoCollector::GetCoreCounts()
 	mCPUCoresNumber = systemInfo.dwNumberOfProcessors;
 	PSYSTEM_LOGICAL_PROCESSOR_INFORMATION info = NULL;
 	DWORD length = 0;
-	GetLogicalProcessorInformation_TYPE pGetProcessorInfo = (GetLogicalProcessorInformation_TYPE)GetProcAddress(GetModuleHandle(L"kernel32"), "GetLogicalProcessorInformation");
-
-	if (pGetProcessorInfo)
+	
+	BOOL res = GetLogicalProcessorInformation(info, &length);
+	if (!res && GetLastError() == ERROR_INSUFFICIENT_BUFFER)
 	{
-		BOOL res = pGetProcessorInfo(info, &length);
-		if (!res)
+		info = (PSYSTEM_LOGICAL_PROCESSOR_INFORMATION)malloc(length);
+		if (info)
 		{
-			info = (PSYSTEM_LOGICAL_PROCESSOR_INFORMATION)malloc(length);
-			if (info)
+			if (GetLogicalProcessorInformation(info, &length))
 			{
-				pGetProcessorInfo(info, &length);
 				DWORD count = length / sizeof(SYSTEM_LOGICAL_PROCESSOR_INFORMATION);
 				for (DWORD i = 0; i < count; ++i)
 				{
-					switch (info[i].Relationship)
+					if (info[i].Relationship == RelationProcessorCore)
 					{
-					case RelationProcessorCore:
 						++mCPUPhysicalCoresNumber;
-						break;
 					}
 				}
-				free((void*)info);
 			}
+			free((void*)info);
 		}
 	}
-	else
+
+	if (mCPUPhysicalCoresNumber == 0)
 	{
 		mCPUPhysicalCoresNumber = mCPUCoresNumber;
 	}
-	assert(0 != mCPUCoresNumber);
+	
+	if (mCPUCoresNumber == 0) mCPUCoresNumber = 1;
 }
 #endif

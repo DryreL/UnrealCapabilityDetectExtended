@@ -20,8 +20,9 @@
 #include <string>
 #include <vector>
 #include <memory>
-#include <d3d11.h>
-#ifdef _WIN32
+#include <cstdint>
+
+#if defined(_WIN32) || defined(_WIN64)
 #include <Pdh.h>
 #pragma comment(lib, "pdh.lib")
 #endif
@@ -40,7 +41,7 @@ class Metric
 {
 public:
 	std::string		mMetricName;
-#ifdef _WIN32
+#if defined(_WIN32) || defined(_WIN64)
 	std::wstring	mPDHPath;		// PDH Path to this metric's data source
 	HCOUNTER		mPDHCounter;	// Handle for this counter
 	DWORD			mCounterType;
@@ -85,7 +86,7 @@ private:
 	void SetCPUBrandString();
 	void SetIsIntelCPU();
 
-#ifdef _WINDOWS
+#if defined(_WIN32) || defined(_WIN64)
 	HQUERY												mQueryHandle;				// Handle for metrics query to PDH
 #endif
 

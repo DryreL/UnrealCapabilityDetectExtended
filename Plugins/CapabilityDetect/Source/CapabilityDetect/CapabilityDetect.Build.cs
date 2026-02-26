@@ -9,8 +9,11 @@ public class CapabilityDetect : ModuleRules
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
-		// UE 5.4 compatibility - use Latest instead of specific version
+		// UE 5 compatibility - use Latest instead of specific version
 		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
+		
+		// Set Modern capabilities
+		bEnableExceptions = false;
 		
 		// Enable precompiled builds for all targets
 		PrecompileForTargets = PrecompileTargetsType.Any;
@@ -39,8 +42,7 @@ public class CapabilityDetect : ModuleRules
 			{
 				"Core",
 				"CoreUObject",
-				"Projects",
-                "SynthBenchmark"
+				"Projects"
 				// ... add other public dependencies that you statically link with here ...
 			}
 		);
@@ -85,7 +87,7 @@ public class CapabilityDetect : ModuleRules
 			}
 		}
 		
-		// UE 5.4 compatibility - ensure proper module loading
+		// UE 5 compatibility - ensure proper module loading
 		if (Target.bBuildEditor)
 		{
 			PrivateDependencyModuleNames.AddRange(new string[] { "UnrealEd" });

@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////////////////
-// Copyright 2017 Intel Corporation
+// Copyright 2017 Intel Corporation & DryreL 2026
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,77 +25,85 @@ class CAPABILITYDETECT_API UCapabilityDetectBPLib : public UBlueprintFunctionLib
 {
 	GENERATED_BODY()
 
-protected:
-	//UPROPERTY()
-	//static FSynthBenchmarkResults m_synthBenchResults;
-	static struct FSynthBenchmarkResults m_synthBenchResults;
 public:
 	// Initializes Values.
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|Core")
 	static void InitializeResources();
 
 	// Cleans up resources.
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|Core")
 	static void FreeResources();
 
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|CPU")
 	static bool IsIntelCPU();
 
 	// These are the getters used in the bucketing decision
 	// They can be used to create your own bucketing solution
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
-	static int GetNumLogicalCores();
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|CPU")
+	static int32 GetNumLogicalCores();
 
 	// Not used in the internal calculation, but are exposed to help
 	// create more elaborate bucketing systems
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
-	static int GetNumPhysicalCores();
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|CPU")
+	static int32 GetNumPhysicalCores();
+	
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|CPU")
+	static bool IsHyperThreadingEnabled();
 
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|Memory")
 	static float GetUsablePhysMemoryGB();
 
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|Memory")
 	static float GetComittedMemoryMB();
 
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|Memory")
 	static float GetAvailableMemoryMB();
 
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|CPU")
 	static float GetCacheSizeMB();
 
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|CPU")
 	static float GetMaxBaseFrequency();
 
 	// These are used in GetMaxFrequency() calculation.
 	// GetCoreFreq returns the frequency at collection time, while PercMaxFrequency returns the percentage of the maximum frequency.
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|CPU")
 	static float GetCoreFrequency();
 
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|CPU")
 	static float GetCorePercMaxFrequency();
 
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|CPU")
 	static FString GetFullProcessorName();
 
-	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|CPU")
 	static FString GetProcessorName();
+	
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|CPU")
+	static FString GetCPUVendorName();
 
 	// RHI Blueprint Function Wrappers
-	UFUNCTION(BlueprintCallable, Category = "GPU Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|GPU")
 	static bool IsRHIIntel();
 
-	UFUNCTION(BlueprintCallable, Category = "GPU Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|GPU")
 	static bool IsRHIAMD();
 
-	UFUNCTION(BlueprintCallable, Category = "GPU Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|GPU")
 	static bool IsRHINVIDIA();
 
-	UFUNCTION(BlueprintCallable, Category = "GPU Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|GPU")
 	static FName RHIVendorName();
+	
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|GPU")
+	static FString GetRHIAdapterDescription();
+	
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|GPU")
+	static FString GetRHIShaderPlatformName();
 
-	UFUNCTION(BlueprintCallable, Category = "CPU Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|Benchmark")
 	static float ComputeGPUPerfIndex();
 
-	UFUNCTION(BlueprintCallable, Category = "CPU Capability Detect Library")
+	UFUNCTION(BlueprintCallable, Category = "Capability Detect Library|Benchmark")
 	static float ComputeCPUPerfIndex();
 };
