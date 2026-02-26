@@ -1,8 +1,10 @@
-// Copyright 2025 Epic Games, Inc. and Intel Corporation. All Rights Reserved.
+// Copyright 1998-2026 Epic Games, Inc. All Rights Reserved.
 
 #include "CapabilityDetect.h"
 #include "CoreMinimal.h"
 #include "Misc/MessageDialog.h"
+#include "Misc/Paths.h"
+#include "HAL/PlatformProcess.h"
 #include "Modules/ModuleManager.h"
 #include "Interfaces/IPluginManager.h"
 #include "ThirdParty/CapabilityDetectLibrary/CapabilityDetectLibrary.h"
