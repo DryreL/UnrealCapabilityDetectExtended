@@ -91,3 +91,5 @@ bUsePrecompiled
 build_log.txt
 build_out.txt
 ubt_log.txt
+_pkg/
+*.zip

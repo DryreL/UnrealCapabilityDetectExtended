@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
-	"Version": 2,
-	"VersionName": "1.1",
+	"Version": 3,
+	"VersionName": "1.2",
 	"FriendlyName": "Capability Detect Extended",
 	"Description": "Detects System Capabilities",
 	"Category": "Intel",
@@ -10,7 +10,7 @@
 	"DocsURL": "https://github.com/DryreL/UnrealCapabilityDetectExtended",
 	"MarketplaceURL": "",
 	"SupportURL": "https://github.com/DryreL/UnrealCapabilityDetectExtended/discussions",
-	"EngineVersion": "5.7",
+	"EngineVersion": "5.8",
 	"CanContainContent": true,
 	"CanBeUsedWithUnrealHeaderTool": false,
 	"Installed": true,

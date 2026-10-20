@@ -89,7 +89,7 @@ void InfoCollector::SetCPUBrandString()
 			mProcessorName = std::string("");
 		}
 	}
-	catch (std::regex_error& e) {
+	catch (const std::regex_error&) {
 		mProcessorName = std::string("");
 	}
 }

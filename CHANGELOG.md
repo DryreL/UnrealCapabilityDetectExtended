@@ -1,5 +1,10 @@
 Intel Capability Detect Extended - Changelog
 
+Version 1.2
+- UE 5.8 compatibility (EngineVersion 5.8, descriptor Version 3).
+- Missing-DLL or load failures are now logged only, no blocking editor dialog.
+- Fixed unused-variable warning in WindowsCollector.cpp; native library rebuilt with current toolset.
+
 Version 1.1
 
 ## Updates & Modernization

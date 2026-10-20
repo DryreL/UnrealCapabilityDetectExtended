@@ -2,7 +2,6 @@
 
 #include "CapabilityDetect.h"
 #include "CoreMinimal.h"
-#include "Misc/MessageDialog.h"
 #include "Misc/Paths.h"
 #include "HAL/PlatformProcess.h"
 #include "Modules/ModuleManager.h"
@@ -62,10 +61,6 @@ void FCapabilityDetectModule::StartupModule()
 		FString ErrorMessage = FString::Printf(TEXT("CapabilityDetect: DLL file not found in either location:\nProject: %s\nPlugin: %s"), *ProjectDllPath, *PluginDllPath);
 		UE_LOG(LogCapabilityDetect, Error, TEXT("%s"), *ErrorMessage);
 		
-		// Show error dialog in editor builds
-	#if WITH_EDITOR
-		FMessageDialog::Open(EAppMsgType::Ok, FText::FromString(ErrorMessage));
-	#endif
 		
 		return; // Exit early if DLL doesn't exist
 	}
@@ -86,10 +81,6 @@ void FCapabilityDetectModule::StartupModule()
 		FString ErrorMessage = FString::Printf(TEXT("CapabilityDetect: Failed to load capability detect library from: %s"), *LibraryPath);
 		UE_LOG(LogCapabilityDetect, Warning, TEXT("%s"), *ErrorMessage);
 		
-		// Only show dialog in editor builds
-	#if WITH_EDITOR
-		FMessageDialog::Open(EAppMsgType::Ok, FText::FromString(ErrorMessage));
-	#endif
 	}
 }
 
