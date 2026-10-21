@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/icon.png" width="128" height="128" alt="Capability Detect icon">
+</p>
+
 Unreal Capability Detect Demo
 =============================
 
